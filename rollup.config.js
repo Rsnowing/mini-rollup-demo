@@ -1,6 +1,6 @@
 import babel from 'rollup-plugin-babel'
-const { terser } = require('rollup-plugin-terser')
-import resolve from '@rollup/plugin-node-resolve'
+const { terser } = require('rollup-plugin-terser') // 原本用的是rollup-plugin-uglify,但是不识别es6语法
+import resolve from '@rollup/plugin-node-resolve' // 解决第三方包import打包后undefined问题
 import commonjs from 'rollup-plugin-commonjs'
 
 const prod = process.env.ENV === 'production'
